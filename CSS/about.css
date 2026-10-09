@@ -1,121 +1,264 @@
-
-/* ABOUT SECTION STYLES */
+/* ===================================================
+   ABOUT SECTION STYLES - DIGITIC.AI
+   =================================================== */
 
 .about-section {
-  padding: 60px 20px;
+    padding: 80px 20px;
+    background-color: #fafafa;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .about-container {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  gap: 60px;
-  align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    position: relative;
 }
 
-/* LEFT IMAGE AREA */
+/* ---------------- LEFT IMAGE AREA ---------------- */
 .about-image-section {
-  position: relative;
-  flex: 1;
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .about-since {
-  position: absolute;
-  left: -40px;
-  top: 0;
-  background: #d9a900;
-  color: #eddefa;
-  padding: 20px 10px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
+    position: absolute;
+    left: -24px;
+    top: 24px;
+    background: linear-gradient(135deg, #fcd739 0%, #d9a900 100%);
+    color: #1a1a1a;
+    padding: 16px 10px;
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(217, 169, 0, 0.35);
+    z-index: 5;
 }
 
 .about-image-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    max-width: 480px;
 }
 
 .about-image {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-  filter: grayscale(100%);
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+    filter: saturate(0.95);
 }
 
-/* RIGHT CONTENT AREA */
+.about-image:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.14);
+    filter: saturate(1.1);
+}
+
+/* ---------------- RIGHT CONTENT AREA ---------------- */
 .about-content-section {
-  flex: 1;
+    flex: 1.1;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    align-self: flex-start;
+    background: rgba(252, 215, 57, 0.18);
+    color: #b38600;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 50px;
+    margin-bottom: 16px;
+    border: 1px solid rgba(252, 215, 57, 0.4);
 }
 
 .about-title {
-  font-family: 'Inter', sans-serif;
-  font-size: 42px;
-  font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 1.25;
+    color: #1f2937;
+    margin: 0 0 18px 0;
+    letter-spacing: -0.5px;
 }
 
-.about-highlight {
-  font-family: 'Inter', sans-serif;
-  color: #c5a102;
-  font-weight: 700;
-  text-transform: capitalize;
-  margin-bottom: 20px;
-  line-height: 1.6;
+.about-title .highlight {
+    background: linear-gradient(135deg, #d9a900 0%, #b8860b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .about-description {
-  font-size: 16px;
-  line-height: 1.7;
-  margin-bottom: 30px;
-  color: #444;
+    font-size: 15.5px;
+    line-height: 1.75;
+    color: #4b5563;
+    margin: 0 0 24px 0;
 }
 
+/* Vision & Philosophy Cards */
+.about-cards-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 28px;
+}
+
+.about-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px 24px;
+    border: 1px solid rgba(252, 215, 57, 0.25);
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+    position: relative;
+    border-left: 4px solid #d9a900;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(217, 169, 0, 0.12);
+}
+
+.about-card-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #b8860b;
+    margin: 0 0 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.about-card-text {
+    font-size: 14.5px;
+    line-height: 1.65;
+    color: #4b5563;
+    margin: 0;
+}
+
+/* Bullet Points List */
+.about-list {
+    list-style: none;
+    padding: 0;
+    margin: 14px 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 16px;
+}
+
+.about-list li {
+    font-size: 14px;
+    color: #374151;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+.about-list li i,
+.about-list li .bullet-icon {
+    color: #d9a900;
+    font-size: 12px;
+    flex-shrink: 0;
+}
+
+/* Read More / Contact Button */
 .about-button {
-  display: inline-block;
-  background-image: linear-gradient(135deg, #fcd739, #9e8c00);
-  color: #fcf9ff;
-  padding: 14px 32px;
-  text-decoration: none;
-  font-weight: 700;
-  border-radius: 4px;
-  transition: background 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    align-self: flex-start;
+    background: linear-gradient(135deg, #fcd739 0%, #d9a900 100%);
+    color: #1a1a1a;
+    padding: 14px 32px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 8px 20px rgba(217, 169, 0, 0.28);
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
 }
 
 .about-button:hover {
-  background: #a7b210;
-  box-shadow: #350162 0px 8px 15px rgba(108, 1, 141, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(217, 169, 0, 0.4);
+    background: linear-gradient(135deg, #ffd943 0%, #e0b005 100%);
 }
 
-/* RESPONSIVE */
-@media (max-width: 992px) {
-  .about-container {
-    flex-direction: column;
-    gap: 40px;
-  }
+/* ---------------- RESPONSIVE DESIGN ---------------- */
+@media (max-width: 1024px) {
+    .about-container {
+        gap: 40px;
+    }
 
-  .about-title {
-    font-size: 34px;
-  }
-
-  .about-since {
-    left: 0;
-    top: -50px;
-    writing-mode: horizontal-tb;
-    transform: none;
-  }
+    .about-title {
+        font-size: 32px;
+    }
 }
 
-@media (max-width: 576px) {
-  .about-image {
-    height: 220px;
-  }
+@media (max-width: 900px) {
+    .about-section {
+        padding: 60px 20px;
+    }
 
-  .about-title {
-    font-size: 28px;
-  }
+    .about-container {
+        flex-direction: column;
+        gap: 45px;
+    }
+
+    .about-image-section {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .about-since {
+        left: 12px;
+        top: -16px;
+        writing-mode: horizontal-tb;
+        transform: none;
+        padding: 6px 14px;
+        font-size: 11px;
+    }
+
+    .about-list {
+        grid-template-columns: 1fr;
+    }
 }
 
+@media (max-width: 600px) {
+    .about-title {
+        font-size: 26px;
+    }
+
+    .about-image {
+        height: 180px;
+        border-radius: 14px;
+    }
+
+    .about-card {
+        padding: 16px 18px;
+    }
+}
